@@ -21,8 +21,12 @@
                   <li><a href="/pages/Log_in.html">Профиль</a></li>
                 </ul>    
               </div>
+              <div class="burger">
+                <span></span>
+              </div>
           </div>
         </nav>
+        
 
       <div class="MainPicture">
       </div>
@@ -52,6 +56,10 @@
             </div>
           </div>
         </div>
+        <div class="Catalog">
+          <button class="Cat_btn"><a href="/pages/Catalog.html">Перейти к товарам</a></button>
+
+        </div>
         
       </main>
 
@@ -68,6 +76,17 @@
           </ul>
         </div>
       </footer>
+      <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            var menu = document.querySelector('.navbar-menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'flex';
+            } else {
+              menu.style.display = 'none';
+            }
+        })
+      </script>
 
   </body>
 </html>

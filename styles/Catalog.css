@@ -24,7 +24,6 @@ html, body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .navbar-menu{
@@ -98,16 +97,16 @@ main{
   justify-content: center;
   align-items: center;
   height: 85vh;
-  width: 1538px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 200px;
-  background: radial-gradient( #800f51 10px, transparent 700px);
+  background: radial-gradient( #800f51 10%, transparent 60%);
 }
 .info{
   border: 1px solid #800f51;
   box-shadow: 0 0 10px #800f51;
-  width: 1052px;
+  width: 80%;
   height: auto;
   padding-bottom:  60px;
   border-radius: 20px;
@@ -193,4 +192,115 @@ footer{
 
 #hr1{
   margin-top: 30px;
+}
+
+.burger{
+  display: none;
+  position: relative;
+  margin-right: 20px;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+}
+
+.burger span{
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #FAF6F2;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+
+@media (max-width: 900px){
+
+  .info{
+    border: 1px solid #800f51;
+    box-shadow: 0 0 10px #800f51;
+    width: 90%;
+    height: auto;
+    margin-top: -50px;
+    padding-bottom:  60px;
+    border-radius: 20px;
+    background-color: rgb(35, 35, 35) ;
+  }
+  .PageName{
+    margin-top: 12vh;
+  }
+
+  .navbar .container{
+    padding: 6vh;
+    
+  }
+
+  .burger { display: flex }
+
+  .navbar-menu{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: black;
+    animation: burgerAnimation 0.4s;
+  }
+
+  .navbar-menu li{
+    flex-direction: column;
+    font-size: 15vh;
+    row-gap: 30px;
+  }
+
+  .navbar-menu li a{
+    text-align: center; 
+    font-size: 12vh;
+  }
+
+  .StaffList li{
+    width: 20vh;
+    height: 100px;
+    margin: 20px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+}
+
+@keyframes burgerAnimation {
+  from {opacity: 0}
+  to {opacity: 1}
 }

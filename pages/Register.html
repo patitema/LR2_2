@@ -19,6 +19,9 @@
               <li><a href="#">Профиль</a></li>
             </ul>    
           </div>
+          <div class="burger">
+            <span></span>
+          </div>
       </div>
     </nav>
   <div class="PageName">
@@ -73,5 +76,16 @@
       </ul>
     </div>
   </footer>
+  <script>
+    document.querySelector('.burger').addEventListener('click', function() {
+        this.classList.toggle('active');
+        var menu = document.querySelector('.navbar-menu');
+        if (menu.style.display === 'none' || menu.style.display === '') {
+            menu.style.display = 'flex';
+        } else {
+          menu.style.display = 'none';
+        }
+    })
+  </script>
 </body>
 </html>
