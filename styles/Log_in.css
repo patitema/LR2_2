@@ -8,6 +8,10 @@
 html, body{ 
   background-color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
+  background: url(/assets/img/ццццвцвц.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 
@@ -19,13 +23,13 @@ html, body{
   z-index: 4;
 }
 
-.navbar .container{
+.container{
   height: inherit;
-  background-color: rgb(65,65,65);
+  background-color: rgb(36, 36, 36);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  border-bottom: 1px solid black;
 }
 
 .navbar-menu{
@@ -36,6 +40,7 @@ html, body{
 
 .navbar-menu li {
   display: inline-block;
+  
 }
 
 .navbar-menu li a {
@@ -44,8 +49,12 @@ html, body{
   text-decoration: none;
   padding-right: 15px;
   align-items: center;
-  font-size: 20px;
+  font-size: 2.5vh;
   transition: all .1s ease-in-out;
+}
+
+.navbar-menu li:hover{
+  text-shadow: 0 0 10px white;
 }
 
 .navbar-wrap{
@@ -56,13 +65,15 @@ html, body{
 .navbar-LOGO{
   font-weight: bold;
   font-weight: 700px;
-  font-size: 30px;
+  font-size: 4vh;
   margin-left: 40px;
-  margin-bottom: 10px;
   text-decoration: none;
   color: white;
 }
 
+.navbar-LOGO:hover{
+  filter: drop-shadow(0 0 5px white);
+}
 .PageName{
   position: relative;
   width: 100%;
@@ -102,8 +113,6 @@ main{
   width: 1538px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 200px;
-  background: radial-gradient( #800f51 70px, transparent 580px);
 }
 .info{
   border: 1px solid #800f51;
@@ -159,7 +168,7 @@ footer{
   margin-left: auto;
   height: auto;
   padding-bottom: 10px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .foot_wrap{

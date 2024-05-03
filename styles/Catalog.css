@@ -8,6 +8,10 @@
 html, body{ 
   background-color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
+  background: url(/assets/img/ццццвцвц.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .navbar{
@@ -20,10 +24,11 @@ html, body{
 
 .navbar .container{
   height: inherit;
-  background-color: rgb(65,65,65);
+  background-color: rgb(36,36,36);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .navbar-menu{
@@ -42,8 +47,12 @@ html, body{
   text-decoration: none;
   padding-right: 15px;
   align-items: center;
-  font-size: 20px;
+  font-size: 2.5vh;
   transition: all .1s ease-in-out;
+}
+
+.navbar-menu li:hover{
+  text-shadow: 0 0 10px white;
 }
 
 .navbar-wrap{
@@ -54,11 +63,14 @@ html, body{
 .navbar-LOGO{
   font-weight: bold;
   font-weight: 700px;
-  font-size: 30px;
+  font-size: 4vh;
   margin-left: 40px;
-  margin-bottom: 10px;
   text-decoration: none;
   color: white;
+}
+
+.navbar-LOGO:hover{
+  filter: drop-shadow(0 0 5px white);
 }
 
 .PageName{
@@ -98,15 +110,11 @@ main{
   align-items: center;
   height: 85vh;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 200px;
-  background: radial-gradient( #800f51 10%, transparent 60%);
 }
 .info{
   border: 1px solid #800f51;
   box-shadow: 0 0 10px #800f51;
-  width: 80%;
+  width: 1000px;
   height: auto;
   padding-bottom:  60px;
   border-radius: 20px;
@@ -162,7 +170,7 @@ footer{
   margin-left: auto;
   height: auto;
   padding-bottom: 10px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .foot_wrap{
@@ -190,6 +198,11 @@ footer{
   transition: all .07s ease-in-out;
 }
 
+.foot_menu li a:hover{
+  color: #f80;
+  text-decoration: underline;
+}
+
 #hr1{
   margin-top: 30px;
 }
@@ -197,7 +210,7 @@ footer{
 .burger{
   display: none;
   position: relative;
-  margin-right: 20px;
+  margin-right: 0px;
   z-index: 50;
   align-items: center;
   justify-content: flex-end;
@@ -242,6 +255,30 @@ footer{
 
 @media (max-width: 900px){
 
+  html, body{ 
+    background: url(#);
+    background-color: #111;
+  }
+
+  .Background_gradient{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin-top: 20%;
+  }
+
+  .navbar-LOGO{
+    font-weight: bold;
+    font-weight: 700px;
+    font-size: 4vh;
+    margin-left: 0px;
+    text-decoration: none;
+    color: white;
+  }
+
   .info{
     border: 1px solid #800f51;
     box-shadow: 0 0 10px #800f51;
@@ -251,6 +288,7 @@ footer{
     padding-bottom:  60px;
     border-radius: 20px;
     background-color: rgb(35, 35, 35) ;
+    margin-bottom: 20px;
   }
   .PageName{
     margin-top: 12vh;
@@ -280,13 +318,13 @@ footer{
 
   .navbar-menu li{
     flex-direction: column;
-    font-size: 15vh;
+    font-size: 7vh;
     row-gap: 30px;
   }
 
   .navbar-menu li a{
     text-align: center; 
-    font-size: 12vh;
+    font-size: 4vh;
   }
 
   .StaffList li{
